@@ -63,8 +63,8 @@ def appointment_update(appointment_id):
 @app.route('/appointment/<appointment_id>/delete', methods=['POST'])
 def appointment_delete(appointment_id):
     """Delete one appointment."""
-    appointments.delete_one({'_id': ObjectId(appointment)})
-    return redirect(url_for('home.html'))
+    appointments.delete_one({'_id': ObjectId(appointment_id)})
+    return redirect(url_for('index'))
 
 
 if __name__ == '__main__':
