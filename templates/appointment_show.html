@@ -1,0 +1,14 @@
+
+<!-- templates/appointment_edit.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{appointment.firstname}} {{appointment.lastname }}</h5>
+        <p class="card-text"> {{appointment.address }}</p>
+        <a href='/appointment/{{appointment._id}}/edit' class="btn btn-primary">Edith</a>
+    </div>
+</div>
+
+{% endblock %}
