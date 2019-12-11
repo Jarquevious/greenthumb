@@ -53,7 +53,13 @@ def appointment_update(appointment_id):
     """Submit an edited appointment."""
     updated_appointment = {
         'firstname':request.form.get('firstname'),
-       'lastname':request.form.get('lastname') 
+        'lastname':request.form.get('lastname'),
+        'address':request.form.get('address'),
+        'city':request.form.get('city'),
+        'state':request.form.get('state'),
+        'zipcode':request.form.get('zipcode'),
+        'bday':request.form.get('bday'),
+        'service':request.form.get('service') 
        }
 
     appointments.update_one({'_id': ObjectId(appointment_id)}, {'$set': updated_appointment})
